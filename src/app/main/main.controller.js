@@ -15,7 +15,6 @@
       history_records: []
     };
 
-    vm.showToastr = showToastr;
     vm.getSubTotal = _getSubTotal;
     vm.showDetails = _showDetails;
 
@@ -40,7 +39,7 @@
         animation: true,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
-        templateUrl: './app/paymentDetails/details.modal.html',
+        templateUrl: 'app/paymentDetails/details.modal.html',
         controller: 'ModalInstanceCtrl',
         controllerAs: '$ctrl',
         size: 'lg',
@@ -89,7 +88,5 @@
         })
     }
 
-    function showToastr() {
-    }
   }
 })();
