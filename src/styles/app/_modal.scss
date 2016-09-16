@@ -1,0 +1,15 @@
+.modal-lg {
+  margin: 0;
+  height: 100%;
+
+  .modal-header {
+    height: 70px;
+    //padding: 0;
+  }
+
+  .modal-content {
+    border-radius: 0;
+    border: none;
+    height: 100%;
+  }
+}

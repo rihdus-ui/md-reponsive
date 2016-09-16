@@ -1,0 +1,34 @@
+@import "variables";
+
+.color-brand {
+  color: $color-brand;
+}
+
+.bg-brand {
+  background-color: $color-brand;
+  color: $color-brand-text;
+}
+
+.bg-fill-empty {
+  background-color: $color-fill;
+}
+
+.bg-fill-shade-1 {
+  background-color: #eeeeee;
+}
+
+.txt-color-sec {
+  color: $color-txt-sec !important;
+}
+
+.txt-color-sec-2 {
+  color: $color-txt-sec2 !important;
+}
+
+.txt-color-alt {
+  color: $color-txt-alt !important;
+}
+
+.txt-color-alt-2 {
+  color: $color-txt-alt2 !important;
+}

@@ -1,0 +1,184 @@
+<div class="container container-full bg-fill-empty"
+     flex layout="column" layout-align="center">
+
+  <!-- Header -->
+  <div class="">
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+  <div class="container--body" flex>
+
+    <div class="card-group cg-collapse-gt-sm">
+      <div class="card card-hero">
+        <div layout-gt-xs="row" layout="column" flex>
+
+
+          <div
+            placement="left"
+            uib-tooltip-popup content="lorem ipsum"></div>
+
+          <div class="row" flex>
+            <div class="col-sm-9 col-xs-8">
+              <h1 class="jumbo">
+                <span>This Month's Charges</span>
+                <span
+                  uib-tooltip="Lorem Ipsum"
+                  class="glyphicon glyphicon glyphicon-question-sign txt-color-sec"
+                  aria-hidden="true"></span>
+              </h1>
+              <h5 class="txt-color-alt txt-light">
+                <span>Mar 1</span>
+                <span>- yesterday</span>
+              </h5>
+              <h5 class="txt-color-alt txt-light">
+                <span>Will be charged on</span>
+                <span>1st Apr 2016</span>
+              </h5>
+            </div>
+
+            <div class="col-sm-3 col-xs-4 text-right">
+              <div class="txt-sub-hero txt-light">USD</div>
+              <div class="txt-hero txt-light">$200</div>
+            </div>
+          </div>
+
+          <div
+            style="height: 45px;"
+            class="hide-xs padding padding-left pdl-md"></div>
+
+          <div
+            style="height: 45px;"
+            class="hide-xs padding padding-left pdl-lg divider dv-at-left"></div>
+
+
+          <!--Spacer -->
+          <div class="padding-top pdt-lg hide-gt-xs"></div>
+
+          <div class="">
+            <div layout="row" layout-gt-xs="column">
+              <div layout="row" layout-align="start center" flex>
+                <span class="glyphicon glyphicon glyphicon-credit-card"
+                      aria-hidden="true" style="font-size: 25px;"></span>
+
+                <span class="padding-left" style="font-size: 16px">
+                  <span class="hide-xs txt-color-sec-2">**** **** ****</span>
+                  <span class="txt-color-sec hide-gt-xs">
+                    ending in
+                  </span>
+                  <span class=>8888</span>
+                </span>
+              </div>
+
+              <p class="padding-top txt-color-alt-2">
+                <span class="hide-xs">
+                  Change Payment details
+                </span>
+
+                <span class="hide-gt-xs">
+                  Switch card
+                </span>
+
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card card-hero">
+        <h1 class="jumbo">
+          Details
+        </h1>
+
+        <table class="table table-dashboard">
+          <thead>
+          <tr>
+            <th></th>
+            <th class="visible-sm-table-cell">Usage</th>
+            <th class="visible-sm-table-cell">Free Quota</th>
+            <th class="visible-sm-table-cell">Chargable</th>
+            <th class="visible-sm-table-cell">$/Unit</th>
+            <th class="visible-sm-table-cell">Sub Total</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="payment in main.store.payment_details">
+            <td class="full-width">
+              <span ng-bind="payment[0]"></span>
+            </td>
+            <td class="visible-sm-table-cell">
+              <span ng-bind="payment[1]"></span>
+            </td>
+            <td class="visible-sm-table-cell">
+              <span ng-bind="payment[2]"></span>
+            </td>
+            <td class="visible-sm-table-cell">
+              <span ng-bind="'x $'+payment[3]"></span>
+            </td>
+            <td class="visible-sm-table-cell">
+              <span ng-bind="payment[4]"></span>
+            </td>
+            <td>
+              <span ng-bind="'$'+main.getSubTotal(payment)"></span>
+            </td>
+            <td class="hide-gt-xs"
+                ng-click="main.showDetails(payment)">
+              <span class="glyphicon glyphicon-menu-right txt-color-sec"
+                    aria-hidden="true"></span>
+            </td>
+          </tr>
+
+          <!-- Total -->
+          <tr>
+            <td class="">
+              <span class="hide-gt-xs txt-color-sec-2">Total: </span>
+            </td>
+            <td class="visible-sm-table-cell"></td>
+            <td class="visible-sm-table-cell"></td>
+            <td class="visible-sm-table-cell"></td>
+            <td class="visible-sm-table-cell"></td>
+            <td class="txt-no-wrap">
+              <span class="hide-xs txt-color-sec-2">Total: </span>
+              <span class="">$2.00</span>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+
+        <h1 class="jumbo">
+          History
+        </h1>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <table class="table table-dashboard">
+              <tbody>
+              <tr ng-repeat="pHistory in main.store.history_records">
+                <td class="full-width txt-color-alt-2">
+                  <span ng-bind="pHistory[1]+' '+pHistory[0]"></span>
+                </td>
+                <td>
+                  <span ng-bind="pHistory[2]"></span>
+                </td>
+                <td>
+                  <span ng-bind="pHistory[3]"></span>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <div>
+    <vis-footer></vis-footer>
+  </div>
+
+</div>

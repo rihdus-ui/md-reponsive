@@ -1,0 +1,140 @@
+@import "variables";
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+
+  .container {
+    min-height: 100%;
+
+    .container--body {
+      overflow: scroll;
+
+      @media (max-width: $screen-xs-min ) {
+        width: 100%;
+      }
+
+      @media (max-width: $screen-sm-min) and (min-width: $screen-xs-min) {
+        width: 80%;
+      }
+
+      @media (min-width: $screen-sm-min) {
+        max-width: 100%;
+
+      }
+      @media (min-width: $screen-md-min) {
+        max-width: 100%;
+
+      }
+      @media (min-width: $screen-lg-min) {
+        max-width: 100%;
+
+      }
+
+    }
+  }
+
+}
+
+.padding {
+  padding: 5px;
+  .pd-sm {
+    padding: $padding-sm;
+  }
+  .pd-lg {
+    padding: $padding-lg;
+  }
+}
+
+.padding-top {
+  padding-top: $padding-base;
+  &.pdt-md {
+    padding-top: $padding-md;
+  }
+  &.pdt-xl {
+    padding-top: $padding-xl;
+  }
+  &.pdt-lg {
+    padding-top: $padding-lg;
+  }
+  &.pdt-sm {
+    padding-top: $padding-sm;
+  }
+}
+
+
+.padding-bottom {
+  padding-bottom: $padding-base;
+  &.pdb-md {
+    padding-bottom: $padding-md;
+  }
+  &.pdb-xl {
+    padding-bottom: $padding-xl;
+  }
+  &.pdb-lg {
+    padding-bottom: $padding-lg;
+  }
+  &.pdb-sm {
+    padding-bottom: $padding-sm;
+  }
+}
+
+.padding-left {
+  padding-left: $padding-base;
+  &.pdl-md {
+    padding-left: $padding-md;
+  }
+  &.pdl-xl {
+    padding-left: $padding-xl;
+  }
+  &.pdl-lg {
+    padding-left: $padding-lg;
+  }
+  &.pdl-sm {
+    padding-left: $padding-sm;
+  }
+}
+
+.padding-right {
+  padding-right: $padding-base;
+  &.pdr-md {
+    padding-right: $padding-md;
+  }
+  &.pdr-xl {
+    padding-right: $padding-xl;
+  }
+  &.pdr-lg {
+    padding-right: $padding-lg;
+  }
+  &.pdr-sm {
+    padding-right: $padding-sm;
+  }
+}
+
+.divider {
+  &.dv-at-left {
+    border-left: 1px solid $divider-color;
+  }
+
+  &.dv-vr {
+    border-left: 1px solid $divider-color;
+  }
+}
+
+.full-width {
+  width:100%;
+}
+
+.visible-sm-table-cell {
+  display: none !important;
+}
+
+@media (min-width: $screen-xs-min) {
+  .visible-sm-table-cell {
+    display: table-cell !important;
+  }
+}

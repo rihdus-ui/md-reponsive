@@ -1,0 +1,32 @@
+@import "mixins/card";
+@import "variables";
+
+.card {
+  @include card();
+}
+
+.card-group {
+  &.cg-collapse-gt-sm {
+    > .card {
+      @media (max-width: $screen-xs-min) {
+      }
+
+      @media (max-width: $screen-sm-min) and (min-width: $screen-xs-min) {
+        &:first-child {
+          border-bottom: none;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          margin-bottom: 0px;
+        }
+
+        &:last-child {
+          border-top: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          margin-bottom: 0px;
+        }
+      }
+
+    }
+  }
+}
